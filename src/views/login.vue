@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <div class="welcome">
-
+            123
         </div>
     </div>
 </template>
@@ -19,4 +19,10 @@ export default {
     }
 }
 </script>
-<style scoped></style>
+<style lang="scss" scoped>
+.login {
+    .welcome {
+        width: 100px
+    }
+}
+</style>

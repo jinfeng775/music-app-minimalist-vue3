@@ -87,3 +87,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/font/Montserrat.otf");
+  font-weight: normal;
+  font-style: normal;
+}

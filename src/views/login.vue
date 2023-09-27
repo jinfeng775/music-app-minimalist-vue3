@@ -11,7 +11,7 @@
         label="+86"
         :clickable="true"
       />
-      <button @click="onClick" class="loginBtn">
+      <button @click="login" class="loginBtn">
         <van-icon name="down" color="#fff" size="30" />
       </button>
     </div>
@@ -24,14 +24,34 @@
 <script>
 import router from "../router";
 import { ref } from "vue";
+import { testLogin } from "@/api/test";
+
 export default {
   setup() {
+    const login = () => {
+      const data = {
+        u: "123123",
+      };
+      testLogin(data).then((res) => {
+        console.log(
+          "%c Line:84 🌶 res",
+          "font-size:16px;color:#ffffff;background:#ffdd4d",
+          res
+        );
+      });
+    };
     const value = ref("");
     const onClick = () => {
-      router.push("/home");
+      console.log(
+        "%c Line:45 🍐 onClick",
+        "font-size:18px;color:#ffffff;background:#4169E1",
+        "onClick"
+      );
+      // router.push("/home");
     };
     return {
       onClick,
+      login,
       value,
     };
   },
